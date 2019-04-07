@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 
-from sys import stdin
+import sys
 
-for line in stdin:
-	line = line.strip()
-	line = line.strip("[")
-	line = line.strip("]")
-	line = line.replace("\"","")
-	user,friend = line.split(", ")
+for line in sys.stdin:
+    line = line.strip()
+    line = line.strip("[").strip("]")
+    line = line.replace("\"", "")
+    user, friend = line.split(", ")
     print "%s\t%s" % (user, friend)
